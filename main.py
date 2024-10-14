@@ -948,7 +948,7 @@ except Exception as ex:
     alert_navigation_system(ex)
 '''
 
-
+'''
 import os
 os.system("cls")
 
@@ -975,4 +975,44 @@ try:
     print(water_left("3", "200", None))
 except RuntimeError as err:
     alert_navigation_system(err)
+'''
 
+'''
+# Creating a utility to convert strings to boolean values
+import os
+os.system("cls")
+
+true_values = ['yes', 'y']
+false_values = ['no', 'n']
+
+
+## Create the function to test for true or false
+
+# You will use `true_values` and `false_values` to create a function named `str_to_bool` to convert strings to Boolean values. `str_to_bool` will accept one parameter named `value`.
+
+# Create the function `str_to_bool`. Convert `value` to lower case letters. If `value` matches an entry in `true_values` the function should return `True`. If `value` matches an entry in `false_values` it should return `False`. If it doesn't match any of the values, it should raise a `ValueError`, with a message of **Invalid entry**.
+def str_to_bool(value):
+    value = value.lower()
+    if value in true_values:
+        return True
+    elif value in false_values:
+        return False
+    raise ValueError("Tipo Erroneo")
+
+try:
+    print(str_to_bool("Yes"))
+    print(str_to_bool("N"))
+    print(str_to_bool(""))
+except Exception as ex:
+    print(ex)
+'''
+
+
+class Car:
+    def __init__(self):
+        self.color = "Red" # ends up on the object
+        self.make = "Mercedes" # becomes a local variable in the constructor
+
+car = Car()
+print(car.color) # "Red"
+print(car.make) # would result in an error, `make` does not exist on the object
