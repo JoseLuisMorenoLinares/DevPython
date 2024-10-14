@@ -811,6 +811,7 @@ print(sequence_time(1,2,3,4,5))
 print(sequence_time(4, 14, 48))
 '''
 
+'''
 import os
 os.system("cls")
 
@@ -818,4 +819,24 @@ os.system("cls")
 def variable_length(**kwargs):
     print(kwargs)
 
+    for key, value in kwargs.items():
+        print(f'{key}: {value}cm')
+
+def crew_members(**kwargs):
+    print(f"{len(kwargs)} astronauts assigned for this mission:")
+    for title, name in kwargs.items():
+        print(f"{title}: {name}")
+
+
 variable_length(tanks=1, day="Wednesday", pilots=3)
+crew_members(captain="Neil Armstrong", pilot="Buzz Aldrin", command_pilot="Michael Collins")
+'''
+
+import os
+os.system("cls")
+
+def fuel_report(**fuel_tanks):
+    for name, value in fuel_tanks.items():
+        print(f'{name}: {value}')
+
+fuel_report(main = 50, external = 100, emergency = 60)
